@@ -1,54 +1,89 @@
+:root {
+  --bg: #0b0d12;
+  --card: #151823;
+  --text: #e6e6eb;
+  --sub: #9aa0a6;
+  --accent: #5865f2; /* Discord color */
+  --danger: #f87171;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-family: "Inter", "Pretendard", sans-serif;
 }
 
 body {
   margin: 0;
-  background: #0f0f13;
-  color: #eaeaf0;
+  background: linear-gradient(180deg, #0b0d12, #07080c);
+  color: var(--text);
 }
 
-.container {
-  max-width: 800px;
+.wrapper {
+  max-width: 880px;
   margin: auto;
-  padding: 24px;
+  padding: 48px 20px;
 }
 
-h1 {
+.hero {
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 48px;
 }
 
-.sub {
-  text-align: center;
-  color: #b5b5c0;
-  margin-bottom: 32px;
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(88,101,242,0.15);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
-section {
-  background: #1a1a22;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.hero h1 {
+  margin: 16px 0 8px;
+  font-size: 40px;
 }
 
-h2 {
+.hero p {
+  color: var(--sub);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
   margin-top: 0;
-  color: #8ab4f8;
+  margin-bottom: 14px;
+  color: var(--accent);
 }
 
-ul {
-  padding-left: 20px;
+.card ul {
+  padding-left: 18px;
 }
 
-li {
-  margin-bottom: 8px;
+.card li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.danger {
+  border-left: 4px solid var(--danger);
 }
 
 footer {
   text-align: center;
-  color: #888;
+  color: var(--sub);
+  margin-top: 40px;
   font-size: 14px;
-  margin-top: 30px;
 }
