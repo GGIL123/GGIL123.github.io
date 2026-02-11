@@ -11,24 +11,35 @@ body {
   top: 18px;
   left: 20px;
   font-size: 26px;
-  background: transparent;
-  border: none;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
   color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1100;
+  transition: 0.2s ease;
 }
 
-/* 드롭다운 */
+.menu-toggle:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+}
+
+/* 드롭다운 메뉴 */
 .dropdown {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #1e1f22;
-  padding-top: 70px;
+  padding-top: 80px;
+  background: rgba(20,21,24,0.95);
+  backdrop-filter: blur(10px);
   transform: translateY(-100%);
-  transition: transform 0.35s ease;
+  transition: transform 0.4s ease;
   z-index: 1000;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
 .dropdown.open {
@@ -37,27 +48,35 @@ body {
 
 .dropdown ul {
   list-style: none;
-  padding: 0 0 20px;
+  padding: 0 0 30px;
   margin: 0;
   text-align: center;
 }
 
 .dropdown li {
-  padding: 12px 0;
+  margin: 10px auto;
+  width: 220px;
 }
 
 .dropdown a {
-  color: #b5bac1;
+  display: block;
+  padding: 12px;
+  border-radius: 12px;
   text-decoration: none;
+  color: #b5bac1;
   font-size: 16px;
-  transition: 0.2s;
+  background: rgba(255,255,255,0.05);
+  transition: 0.25s ease;
 }
 
 .dropdown a:hover {
+  background: #5865F2;
   color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(88,101,242,0.4);
 }
 
-/* 카드 컨테이너 */
+/* 카드 */
 .container {
   max-width: 800px;
   margin: 100px auto 40px;
@@ -69,7 +88,6 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 32px;
 }
 
 .sub {
