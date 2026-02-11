@@ -1,6 +1,12 @@
-const toggleBtn = document.querySelector(".menu-toggle");
-const dropdown = document.querySelector(".dropdown");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".dropdown-menu");
 
-toggleBtn.addEventListener("click", () => {
-  dropdown.classList.toggle("open");
+  menuBtn.addEventListener("click", function () {
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  });
 });
