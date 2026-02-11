@@ -1,25 +1,24 @@
-/* 기본 배경 */
 body {
   margin: 0;
-  background: #2b2d31;
-  font-family: 'Segoe UI', sans-serif;
-  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #1e1f22, #2b2d31);
+  color: white;
 }
 
-/* ===== 햄버거 버튼 ===== */
+/* 햄버거 버튼 */
 .menu-toggle {
   position: fixed;
   top: 18px;
   left: 20px;
   font-size: 26px;
-  background: none;
+  background: transparent;
   border: none;
   color: white;
   cursor: pointer;
   z-index: 1001;
 }
 
-/* ===== 드롭다운 메뉴 ===== */
+/* 드롭다운 */
 .dropdown {
   position: fixed;
   top: 0;
@@ -27,15 +26,11 @@ body {
   width: 100%;
   background: #1e1f22;
   padding-top: 70px;
-
-  /* 🔥 완전 위로 숨김 */
   transform: translateY(-100%);
   transition: transform 0.35s ease;
-
   z-index: 1000;
 }
 
-/* 열렸을 때 */
 .dropdown.open {
   transform: translateY(0);
 }
@@ -60,4 +55,48 @@ body {
 
 .dropdown a:hover {
   color: white;
+}
+
+/* 카드 컨테이너 */
+.container {
+  max-width: 800px;
+  margin: 100px auto 40px;
+  padding: 30px;
+  background: #2b2d31;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.sub {
+  text-align: center;
+  color: #b5bac1;
+  margin-bottom: 30px;
+}
+
+section {
+  background: #313338;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  color: #b5bac1;
+  margin-top: 30px;
 }
