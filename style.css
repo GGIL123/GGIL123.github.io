@@ -12,7 +12,7 @@ html, body {
 /* ===== 전체 배경 (여기만 배경 적용) ===== */
 body {
   font-family: 'Pretendard', sans-serif;
-  background: linear-gradient(180deg, #0f1117, #1a1d26);
+  background: radial-gradient(circle at top, #1c1f27, #12141a 70%);
   color: white;
   min-height: 100vh;
   overflow-x: hidden;
