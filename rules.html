@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>서버 규칙</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div>🏡 마을 디스코드</div>
+</div>
+
+<div class="menu" id="menu">
+  <a href="index.html">🏠 홈</a>
+  <a href="bot.html">🤖 봇 소개</a>
+  <a href="tips.html">💡 서버 사용 팁</a>
+  <a href="rules.html">📜 규칙</a>
+  <a href="notice.html">📢 공지</a>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h1>📜 서버 규칙</h1>
+    <ul>
+      <li>상호 존중은 기본입니다.</li>
+      <li>도배 금지.</li>
+      <li>정치/종교 갈등 유발 금지.</li>
+      <li>무단 녹음 금지.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.maxHeight = menu.style.maxHeight ? null : "400px";
+}
+</script>
+
+</body>
+</html>
