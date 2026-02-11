@@ -9,75 +9,108 @@ html, body {
   height: 100%;
 }
 
-/* ===== 전체 배경 (여기만 배경 적용) ===== */
 body {
-  font-family: 'Pretendard', sans-serif;
-  background: radial-gradient(circle at top, #1c1f27, #12141a 70%);
-  color: white;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* ===== 상단 바 ===== */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
-  padding: 15px 20px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
+  padding: 0 20px;
   z-index: 1000;
 }
 
-.menu-btn {
+.menu-toggle {
   font-size: 26px;
   cursor: pointer;
   margin-right: 15px;
 }
 
-/* ===== 카드 영역 ===== */
-.container {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background: #2a2d36;
-  padding: 30px;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 500px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* ===== 사이드 메뉴 ===== */
-.sidebar {
-  position: fixed;
-  left: -260px;
-  top: 0;
-  width: 260px;
-  height: 100%;
-  background: #1f222b;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 2000;
-}
-
-.sidebar a {
-  display: block;
-  padding: 15px 20px;
-  text-decoration: none;
-  color: white;
+.nav-title {
+  font-weight: bold;
   font-size: 18px;
-  transition: background 0.2s;
 }
 
-.sidebar a:hover {
-  background: #333845;
-}
-
-.sidebar.active {
+/* ===== 드롭다운 메뉴 ===== */
+.dropdown-menu {
+  position: fixed;
+  top: 60px;
   left: 0;
+  width: 100%;
+  background: #1e293b;
+  display: none;              /* 기본 숨김 */
+  flex-direction: column;
+  padding: 15px 0;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 25px;
+  font-size: 16px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* ===== 메인 컨텐츠 ===== */
+.container {
+  padding: 100px 20px 40px 20px;  /* 상단바 공간 확보 */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== 카드 디자인 ===== */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+/* ===== 제목 ===== */
+.card h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* ===== 리스트 ===== */
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* ===== 푸터 ===== */
+footer {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 14px;
+  margin-top: 30px;
 }
