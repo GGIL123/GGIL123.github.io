@@ -1,47 +1,118 @@
-/* 네비게이션 바 */
+/* ===== 기본 초기화 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1e1f26, #2c2f36);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===== 네비게이션 바 ===== */
 .navbar {
   display: flex;
   align-items: center;
   background: #5865F2;
-  color: white;
   padding: 15px 20px;
   position: relative;
 }
 
-/* 햄버거 버튼 */
+.nav-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .menu-toggle {
   font-size: 24px;
   cursor: pointer;
   margin-right: 15px;
+  user-select: none;
 }
 
-/* 드롭다운 기본 숨김 */
+/* ===== 드롭다운 메뉴 ===== */
 .dropdown-menu {
-  display: none;
+  display: none; /* 기본 숨김 */
   flex-direction: column;
   background: #404EED;
   position: absolute;
   top: 60px;
   left: 0;
-  width: 220px;
-  padding: 10px 0;
-  border-radius: 0 0 12px 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 230px;
+  border-radius: 0 0 14px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  overflow: hidden;
+  z-index: 999;
 }
 
-/* 열렸을 때 */
 .dropdown-menu.active {
-  display: flex;
+  display: flex; /* 클릭 시 보이기 */
 }
 
-/* 메뉴 링크 */
 .dropdown-menu a {
   color: white;
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 14px 20px;
   transition: background 0.2s;
+  font-weight: 500;
 }
 
 .dropdown-menu a:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
+}
+
+/* ===== 컨테이너 카드 ===== */
+.container {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #2b2d31;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* 제목 */
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.sub {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* 섹션 */
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #232428;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #7289da;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* 푸터 */
+footer {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.7;
 }
