@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>마을 디스코드</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>마을 디스코드 - 홈</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="topbar">
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div>🏡 마을 디스코드</div>
+<div class="navbar">
+  <div class="menu-toggle">☰</div>
+  <div class="nav-title">🏡 마을 디스코드</div>
 </div>
 
-<div class="menu" id="menu">
-  <a href="index.html">🏠 홈</a>
-  <a href="bot.html">🤖 봇 소개</a>
-  <a href="tips.html">💡 서버 사용 팁</a>
-  <a href="rules.html">📜 규칙</a>
-  <a href="notice.html">📢 공지</a>
+<div class="dropdown-menu">
+  <a href="index.html">홈</a>
+  <a href="bot.html">봇 소개</a>
+  <a href="tips.html">서버 사용 팁</a>
+  <a href="rules.html">규칙</a>
+  <a href="notice.html">공지</a>
 </div>
 
 <div class="container">
-  <div class="card">
-    <h1>🏡 마을 디스코드입니다.</h1>
-    <p>
-      편안한 분위기의 마을 컨셉 서버입니다.<br><br>
-      함께 게임하고, 대화하고, 성장하는 공간입니다.
-    </p>
-  </div>
+  <h1>🏡 마을 디스코드입니다.</h1>
+  <p class="sub">즐겁고 평화로운 마을 서버입니다.</p>
+
+  <section>
+    <h2>✨ 서버 소개</h2>
+    <p>이곳은 자유롭게 소통하고 게임과 다양한 활동을 즐기는 커뮤니티 서버입니다.</p>
+  </section>
 </div>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.style.maxHeight = menu.style.maxHeight ? null : "400px";
-}
-</script>
-
-<scriptsrc="script.js"></scriptsrc>
+<script src="script.js"></script>
 </body>
 </html>
