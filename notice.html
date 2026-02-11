@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>공지</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div>🏡 마을 디스코드</div>
+</div>
+
+<div class="menu" id="menu">
+  <a href="index.html">🏠 홈</a>
+  <a href="bot.html">🤖 봇 소개</a>
+  <a href="tips.html">💡 서버 사용 팁</a>
+  <a href="rules.html">📜 규칙</a>
+  <a href="notice.html">📢 공지</a>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h1>📢 공지사항</h1>
+    <p>현재 특별 공지는 없습니다.</p>
+    <footer>최종 수정일: 2026-02-11</footer>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.style.maxHeight = menu.style.maxHeight ? null : "400px";
+}
+</script>
+
+</body>
+</html>
