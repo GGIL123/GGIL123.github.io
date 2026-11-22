@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
   const saved = localStorage.getItem("maeul-theme") || "dark";
-  const applyTheme = (mode) => {
+  const applyTheme = mode => {
     const theme = mode === "system" ? (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark") : mode;
     root.dataset.theme = theme;
     document.querySelectorAll('[name="theme"]').forEach(input => input.checked = input.value === mode);
@@ -25,13 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  const current = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".mobile-dock a").forEach(link => {
+    if (link.dataset.page === current) link.classList.add("active");
+  });
   document.querySelectorAll("[data-copy]").forEach(button => button.addEventListener("click", async () => {
-    const value = button.dataset.copy;
-    try {
-      await navigator.clipboard.writeText(value);
-      button.textContent = "복사 완료!";
-    } catch {
-      button.textContent = "복사할 코드: " + value;
-    }
+    try { await navigator.clipboard.writeText(button.dataset.copy); button.textContent = "복사 완료"; }
+    catch { button.textContent = "코드를 길게 눌러 복사해 주세요"; }
   }));
 });
